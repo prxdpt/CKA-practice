@@ -8,5 +8,6 @@ spec:
   containers:
   - name: applet-container
     image: todo:latest 
+    imagePullPolicy: IfNotPresent
     ports:
     - containerPort: 80

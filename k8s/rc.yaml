@@ -1,14 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: ReplicationController
 metadata:
-  name: applet-deployment
+  name: applet-replicas
   labels:
-    app: applet
-spec:
-  replicas: 5
-  selector:
-    matchLabels:
       app: applet
+spec:
+  replicas: 3
+  selector:
+    app: applet
   template:
     metadata:
       labels:

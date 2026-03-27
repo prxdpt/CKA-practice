@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
-  name: applet-deployment
+  name: applet-replicas
   labels:
-    app: applet
+      app: applet
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: applet
