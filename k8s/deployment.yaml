@@ -16,8 +16,6 @@ spec:
     spec:
       containers:
       - name: applet-container
-        # Replace the image below with your actual built Docker image
-        # For example: prxdpt/applet-docker:latest
-        image: applet-docker:latest 
+        image: todo:latest
         ports:
         - containerPort: 80
