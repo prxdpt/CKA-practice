@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: applet-deployment
+  labels:
+    app: applet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: applet
+  template:
+    metadata:
+      labels:
+        app: applet
+    spec:
+      containers:
+      - name: applet-container
+        # Replace the image below with your actual built Docker image
+        # For example: prxdpt/applet-docker:latest
+        image: applet-docker:latest 
+        ports:
+        - containerPort: 80
